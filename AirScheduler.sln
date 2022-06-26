@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32616.157
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AirScheduler", "AirScheduler\AirScheduler.csproj", "{033624B7-E8D7-46F2-86BF-0F8FC6273B50}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{033624B7-E8D7-46F2-86BF-0F8FC6273B50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{033624B7-E8D7-46F2-86BF-0F8FC6273B50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{033624B7-E8D7-46F2-86BF-0F8FC6273B50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{033624B7-E8D7-46F2-86BF-0F8FC6273B50}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {37797AEE-9309-4B15-906F-7F54664B31DD}
+	EndGlobalSection
+EndGlobal
