@@ -4,17 +4,29 @@ using System.Linq;
 using System.Web;
 using System.Web.Mvc;
 using AirScheduler.Models;
+using AirScheduler.ViewModels;
 
 namespace AirScheduler.Controllers
 {
-    public class EmployeesController : Controller
+    public class EmployerController : Controller
     {
-        // GET: Employee/Random
-        public ViewResult Random()
+        // GET: Employer/Random
+        public ActionResult Random()
         {
-            var employee = new Employee() { Name = "Shrek" };
+            var employer = new Employer() { Name = "Shrek" };
+            var employees = new List<Employee>
+            {
+                new Employee {Name = "Employee 1"},
+                new Employee {Name = "Employee 2"}
+            };
+
+            var viewModel = new RandomEmployeeViewModel
+            {
+                Employer = employer,
+                Employees = employees
+            };
             
-            return View(employee);
+            return View(viewModel);
         }
 
         public ActionResult Edit(int id)
@@ -22,7 +34,7 @@ namespace AirScheduler.Controllers
             return Content("id= " + id);
         }
 
-        // employees
+        // employers
         public ActionResult Index(int? pageIndex, string sortBy)
         {
             if (!pageIndex.HasValue)
@@ -33,7 +45,7 @@ namespace AirScheduler.Controllers
 
             return Content(String.Format("pageIndex={0}&sortBy={1}", pageIndex, sortBy));
         }
-        [Route("employees/Employer/{eid}")]
+        [Route("employer/Employee/{eid}")]
         public ActionResult ByEmployer(int eid)
         {
             return Content(eid + "");

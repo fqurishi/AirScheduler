@@ -1,0 +1,24 @@
+﻿@model AirScheduler.ViewModels.RandomEmployeeViewModel
+@{
+    ViewBag.Title = "Random";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@{ 
+    var className = Model.Employees.Count > 0 ? "popular" : null;
+}
+
+<h2 class="@className">@Model.Employer.Name</h2>
+
+@if (Model.Employees.Count == 0)
+{
+    <text>No Employees for this employer.</text>
+}
+else
+{
+    <ul>
+        @foreach (var employee in Model.Employees)
+        {
+            <li>@employee.Name</li>
+        }
+    </ul>
+}
