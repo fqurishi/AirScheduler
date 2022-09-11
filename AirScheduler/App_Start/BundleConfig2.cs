@@ -3,7 +3,7 @@ using System.Web.Optimization;
 
 namespace AirScheduler
 {
-    public class BundleConfig
+    public class BundleConfig2
     {
         // For more information on bundling, visit https://go.microsoft.com/fwlink/?LinkId=301862
         public static void RegisterBundles(BundleCollection bundles)
@@ -23,7 +23,7 @@ namespace AirScheduler
                       "~/Scripts/bootstrap.js"));
 
             bundles.Add(new StyleBundle("~/Content/css").Include(
-                      "~/Content/bootstrap-simplex.css",
+                      "~/Content/bootstrap.css",
                       "~/Content/site.css"));
         }
     }
