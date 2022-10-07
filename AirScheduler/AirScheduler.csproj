@@ -170,13 +170,36 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\EmployerController.cs" />
+    <Compile Include="Controllers\EmployeesController.cs" />
+    <Compile Include="Controllers\EmployersController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202209120457334_InitialModel.cs" />
+    <Compile Include="Migrations\202209120457334_InitialModel.designer.cs">
+      <DependentUpon>202209120457334_InitialModel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209121000536_AddEmployerId.cs" />
+    <Compile Include="Migrations\202209121000536_AddEmployerId.designer.cs">
+      <DependentUpon>202209121000536_AddEmployerId.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209121008037_AddAccountType.cs" />
+    <Compile Include="Migrations\202209121008037_AddAccountType.designer.cs">
+      <DependentUpon>202209121008037_AddAccountType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209121010126_PopulateAccountTypes.cs" />
+    <Compile Include="Migrations\202209121010126_PopulateAccountTypes.designer.cs">
+      <DependentUpon>202209121010126_PopulateAccountTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202209121019337_ApplyAnnotationsToEmployeeandEmployer.cs" />
+    <Compile Include="Migrations\202209121019337_ApplyAnnotationsToEmployeeandEmployer.designer.cs">
+      <DependentUpon>202209121019337_ApplyAnnotationsToEmployeeandEmployer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
+    <Compile Include="Models\AccountType.cs" />
     <Compile Include="Models\Employer.cs" />
     <Compile Include="Models\Employee.cs" />
     <Compile Include="Models\IdentityModels.cs" />
@@ -242,8 +265,11 @@
     <Content Include="Views\Manage\VerifyPhoneNumber.cshtml" />
     <Content Include="Views\Shared\Lockout.cshtml" />
     <Content Include="Views\Shared\_LoginPartial.cshtml" />
-    <Content Include="Views\Employer\Random.cshtml" />
+    <Content Include="Views\Employers\Random.cshtml" />
     <Content Include="Views\Shared\_NavBar.cshtml" />
+    <Content Include="Views\Employees\Details.cshtml" />
+    <Content Include="Views\Employees\Index.cshtml" />
+    <Content Include="Views\Employers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -261,6 +287,23 @@
     <None Include="packages.config" />
     <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
     <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202209120457334_InitialModel.resx">
+      <DependentUpon>202209120457334_InitialModel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209121000536_AddEmployerId.resx">
+      <DependentUpon>202209121000536_AddEmployerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209121008037_AddAccountType.resx">
+      <DependentUpon>202209121008037_AddAccountType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209121010126_PopulateAccountTypes.resx">
+      <DependentUpon>202209121010126_PopulateAccountTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202209121019337_ApplyAnnotationsToEmployeeandEmployer.resx">
+      <DependentUpon>202209121019337_ApplyAnnotationsToEmployeeandEmployer.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

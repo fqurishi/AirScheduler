@@ -1,0 +1,23 @@
+﻿@model IEnumerable<AirScheduler.Models.Employer>
+
+@{
+    ViewBag.Title = "Employers";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Employers</h2>
+<table class="table table-bordered table-hover">
+    <thead>
+        <tr>
+            <th>Employer</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var employer in Model)
+        {
+            <tr>
+                <td>@employer.Name</td>
+            </tr>
+        }
+    </tbody>
+</table>
